@@ -1,0 +1,47 @@
+#  Entorno virtual
+venv/
+.env/
+.env
+
+#  Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+#  Logs
+logs/
+*.log
+
+#  Archivos temporales
+*.tmp
+*.temp
+
+#  Jupyter
+.ipynb_checkpoints/
+
+#  Sistema operativo
+.DS_Store
+Thumbs.db
+
+#  VS Code / IDE
+.vscode/
+.idea/
+
+#  Datos 
+data/raw/
+data/processed/
+
+
+#  Modelos entrenados
+models/*.joblib
+models/*.pkl
+models/*.ipynb
+
+
+#  CSV de resultados
+data/outputs/predictions.csv
+
+# Py de prueba
+/test_predict.py
+

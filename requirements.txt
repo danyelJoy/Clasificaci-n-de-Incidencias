@@ -1,0 +1,26 @@
+# Core
+pandas==2.2.2
+numpy==1.26.4
+
+# NLP & ML
+scikit-learn==1.4.2
+nltk==3.8.1
+spacy==3.7.4
+
+# Visualización
+matplotlib==3.8.4
+seaborn==0.13.2
+
+# Utilidades
+tqdm==4.66.4
+joblib==1.4.2
+
+# Notebooks
+jupyter==1.0.0
+ipykernel==6.29.4
+
+# (Opcional futuro - transformers)
+transformers==4.41.2
+torch==2.3.0
+fastapi==0.135.3
+pydantic==2.13.0
