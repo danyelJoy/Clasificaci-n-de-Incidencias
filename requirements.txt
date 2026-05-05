@@ -24,3 +24,4 @@ transformers==4.41.2
 torch==2.3.0
 fastapi==0.135.3
 pydantic==2.13.0
+streamlit==1.56.0

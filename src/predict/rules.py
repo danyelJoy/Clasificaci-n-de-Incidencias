@@ -13,26 +13,44 @@ def get_confidence_status(confidence: float) -> str:
 def assign_priority(category: str, confidence: float) ->tuple[str, str]:
     """
     Asigna prioridad y motivo con base en la categoria y confianza."""
+    if confidence < 0.60:
+        return(
+            "media",
+            "La confianza del modelo es baja, por lo que se recomienda revisión manual."
+            )
     if category == "service_outage":
         return(
             "alta",
             "Se asignó prioridad alta porque la categoría corresponde a una caída de servicio"
         )
-    if category == "login_issue":
-        return(
+    if category == "account_access":
+        return (
             "media",
-            "Se asignó prioridad media porque el problema afecta el acceso al usuario.."
+            "Se asignó prioridad media porque el incidente está relacionado con acceso a cuenta."
+        )
+    
+    if category == "billing_payment":
+        return(
+            "alta",
+            "Se asignó prioridad alta porque la categoría está relacionada con pagos"
         )
     if category == "payment_problem":
         return(
             "alta",
             "Se asignó prioridad alta porque el incidente está relacionado con pagos."
         )
-    if confidence < 0.60:
+    if category == "account_access":
+        return (
+            "media",
+            "Se asignó prioridad media porque el incidente está relacionado con acceso a cuenta."
+        )
+    
+    if category == "login_issue":
         return(
             "media",
-            "La confianza del modelo es baja, por lo que se recomienda revisión manual."
+            "Se asignó prioridad media porque el problema afecta el acceso al usuario.."
         )
+
     return(
         "baja",
         "Se asignó prioridad bajá porque se detectó una categoría crítica."

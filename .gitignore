@@ -34,7 +34,6 @@ data/processed/
 
 
 #  Modelos entrenados
-models/*.joblib
 models/*.pkl
 models/*.ipynb
 
@@ -44,4 +43,5 @@ data/outputs/predictions.csv
 
 # Py de prueba
 /test_predict.py
-
+/train_model.py
+/analize_ticket.py

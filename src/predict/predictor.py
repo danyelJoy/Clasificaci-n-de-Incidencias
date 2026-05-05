@@ -27,7 +27,6 @@ def predict_ticket(text: str)-> Dict[str, Any]:
 
     prediction = model.predict([text])[0]
     confidence = float(model.predict_proba([text]).max())
-
     confidence_status = get_confidence_status(confidence)
     priority, reason = assign_priority(prediction, confidence)
 
